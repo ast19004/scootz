@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Pacifico&family=Poppins:wght@400;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin-bottom: -20px;
+}
+
+.font-heavy {
+  font-weight: 800;
+}
+
+.font-accent_primary {
+  font-family: "Pacifico", cursive;
+}
+
+.font-accent_secondary {
+  font-family: "Cormorant", serif;
+}
+
+.font-large {
+  font-size: 60px;
+}
+.font-medium {
+  font-size: 24px;
+}
+.font-small {
+  font-size: 20px;
+}
+
+.overlay-text {
+  color: white;
+  position: absolute;
+  top: 25%;
+  left: 4%;
+  z-index: 1;
+}
+.midlay-text {
+  position: absolute;
+  top: 25%;
+  left: 4%;
+  opacity: 10%;
+  font-size: 90px;
+  text-shadow: 5px 5px rgba(0, 0, 0, 1);
+}
+
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  padding: 1% 4%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 92%;
+  overflow: hidden;
+  background-color: rgba(201, 194, 177, 0.2);
+}
