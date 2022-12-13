@@ -3,8 +3,9 @@ import lasUvas from "../../assets/las-uvas.png";
 import castilloReal from "../../assets/castillo-real.png";
 
 import SectionHeader from "../SectionHeader";
+import DestinationCard from "./DestinationCard";
 
-import { Box, ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 const Destinations = () => {
   const itemData = [
@@ -33,18 +34,32 @@ const Destinations = () => {
           Paradise you will never forget
         </p>
       </section>
-      <ImageList sx={{ width: 510, height: 264 }}>
-        {itemData.map((item) => (
-          <ImageListItem key={item.img}>
-            <img src={item.img} alt={item.title} loading="lazy" />
-            <ImageListItemBar
-              title={item.title}
-              subtitle={<span>{item.location}</span>}
-              position="below"
-            />
-          </ImageListItem>
-        ))}
-      </ImageList>
+      <Grid
+        container
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+        spacing={2}
+      >
+        <DestinationCard
+          image={playaDelCarmen}
+          imageTitle="Playa Del Carmen"
+          location="Playa Del Carmen"
+          islandDirection="Main Land"
+        />
+        <DestinationCard
+          image={lasUvas}
+          imageTitle="Las Uvas"
+          location="Las Uvas"
+          islandDirection="West Side"
+        />
+        <DestinationCard
+          image={castilloReal}
+          imageTitle="Castillo Real"
+          location="Castillo Real"
+          islandDirection="North-Shore"
+        />
+      </Grid>
     </Box>
   );
 };
