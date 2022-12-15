@@ -9,7 +9,7 @@ import ActionButton from "../ActionButton";
 const Header = (props) => {
   const [offset, setOffset] = useState(0);
 
-  const classes = offset > 1 ? styles["header_scrolled"] : "";
+  const classes = offset > 50 ? styles["header_scrolled"] : "";
   useEffect(() => {
     const onScroll = () => setOffset(window.pageYOffset);
     // clean up code
