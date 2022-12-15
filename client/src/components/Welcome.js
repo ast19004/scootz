@@ -1,7 +1,29 @@
+import { useEffect, useRef, useState, useContext } from "react";
 import mainImage from "../assets/couple-riding-on-bike.png";
 import { Box } from "@mui/system";
 
+import ScrollContext from "../store/scroll-context";
+
 const Welcome = (props) => {
+  const scrollCtx = useContext(ScrollContext);
+  const welcomeText = useRef();
+
+  const [welcomeTextData, setWelcomeTextData] = useState(null);
+
+  useEffect(() => {
+    setWelcomeTextData(welcomeText.current.getBoundingClientRect());
+    console.log(JSON.stringify(welcomeTextData));
+    // setWelcomeTextOffset(welcomeText.current.offsetTop);
+  }, [scrollCtx.offset, window.innerWidth]);
+
+  useEffect(() => {
+    if (!welcomeTextData) {
+      return;
+    }
+    if (Math.floor(welcomeTextData.top) === 0) {
+    }
+  }, [scrollCtx.offset, welcomeTextData]);
+
   return (
     <Box
       className={props.className}
@@ -9,7 +31,7 @@ const Welcome = (props) => {
       sx={{ position: "relative", zIndex: "-1" }}
     >
       <img src={mainImage} alt="Man & Woman riding on a scooter" width="100%" />
-      <section className="overlay-text">
+      <section className="overlay-text" ref={welcomeText}>
         <h1 className="font-large">COZUMEL</h1>
         <span className="font-accent_primary font-medium">
           explore the road to paradise
