@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
 
 import styles from "./Header.module.css";
 
@@ -6,18 +6,11 @@ import Logo from "./Logo";
 import Navigation from "./Navigation/MainNav";
 import ActionButton from "../ActionButton";
 
+import ScrollContext from "../../store/scroll-context";
+
 const Header = (props) => {
-  const [offset, setOffset] = useState(0);
-
-  const classes = offset > 50 ? styles["header_scrolled"] : "";
-  useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
-    // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [offset]);
+  const scrollCtx = useContext(ScrollContext);
+  const classes = scrollCtx.offset > 50 ? styles["header_scrolled"] : "";
 
   return (
     <header className={classes}>
