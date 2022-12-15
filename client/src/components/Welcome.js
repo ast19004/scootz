@@ -1,9 +1,13 @@
 import mainImage from "../assets/couple-riding-on-bike.png";
 import { Box } from "@mui/system";
 
-const Welcome = () => {
+const Welcome = (props) => {
   return (
-    <Box sx={{ position: "relative", zIndex: "-1" }}>
+    <Box
+      className={props.className}
+      component="article"
+      sx={{ position: "relative", zIndex: "-1" }}
+    >
       <img src={mainImage} alt="Man & Woman riding on a scooter" width="100%" />
       <section className="overlay-text">
         <h1 className="font-large">COZUMEL</h1>

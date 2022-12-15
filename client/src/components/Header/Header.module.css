@@ -8,3 +8,6 @@ header {
   overflow: hidden;
   background-color: rgba(201, 194, 177, 0.2);
 }
+.header_scrolled {
+  background-color: white;
+}

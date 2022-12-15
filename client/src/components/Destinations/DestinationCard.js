@@ -2,7 +2,7 @@ import { Grid, Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 const DestinationCard = (props) => {
   return (
-    <Grid item md={6} lg={4} width="fit-content" maxWidth="100%">
+    <Grid item sm={6} md={6} lg={4} width="fit-content" maxWidth="100%">
       <Card>
         <img src={props.image} alt={props.location} />
         <CardContent>
