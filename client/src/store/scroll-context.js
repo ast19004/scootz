@@ -1,25 +1,33 @@
 import React, { useState, useEffect } from "react";
 
 const ScrollContext = React.createContext({
-  offset: 0,
+  offsetY: 0,
 });
 
 export const ScrollContextProvider = (props) => {
-  const [offset, setOffset] = useState(0);
+  const [offsetX, setOffsetX] = useState(0);
+  const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScrollX = () => setOffsetX(window.pageXOffset);
+    const onScrollY = () => setOffsetY(window.pageYOffset);
     // clean up code
-    window.removeEventListener("scroll", onScroll);
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.removeEventListener("scroll", onScrollX);
+    window.addEventListener("scroll", onScrollX, { passive: true });
 
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [offset]);
+    window.removeEventListener("scroll", onScrollY);
+    window.addEventListener("scroll", onScrollY, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScrollX);
+      window.removeEventListener("scroll", onScrollY);
+    };
+  }, [offsetX, offsetY]);
 
   return (
     <ScrollContext.Provider
       value={{
-        offset: offset,
+        offsetY: offsetY,
       }}
     >
       {props.children}
