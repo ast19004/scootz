@@ -9,7 +9,7 @@ import ScrollContext from "../../store/scroll-context";
 
 const Header = (props) => {
   const scrollCtx = useContext(ScrollContext);
-  const classes = scrollCtx.offset > 50 ? styles["header_scrolled"] : "";
+  const classes = scrollCtx.offsetY > 50 ? styles["header_scrolled"] : "";
 
   return (
     <header className={classes}>

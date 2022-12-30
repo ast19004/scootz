@@ -47,6 +47,23 @@ h1 {
   text-shadow: 5px 5px rgba(0, 0, 0, 1);
 }
 
+@media (max-width: 599px) {
+  .destinationsContainer .SM {
+    display: block !important;
+  }
+  .destinationsContainer .MD {
+    display: none !important;
+  }
+}
+@media (min-width: 600px) {
+  .destinationsContainer .SM {
+    display: none !important;
+  }
+  .destinationsContainer .MD {
+    display: flex !important;
+  }
+}
+
 /* .App {
   text-align: center;
 } */

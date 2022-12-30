@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const ScrollContext = React.createContext({
+  offsetX: 0,
   offsetY: 0,
 });
 
@@ -27,6 +28,7 @@ export const ScrollContextProvider = (props) => {
   return (
     <ScrollContext.Provider
       value={{
+        offsetX: offsetX,
         offsetY: offsetY,
       }}
     >

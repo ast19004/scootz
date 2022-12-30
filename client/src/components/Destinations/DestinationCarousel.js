@@ -5,9 +5,9 @@ import castilloReal from "../../assets/castillo-real.png";
 import Carousel from "react-material-ui-carousel";
 import DestinationCard from "./DestinationCard";
 
-const DestinationCarousel = () => {
+const DestinationCarousel = (props) => {
   return (
-    <Carousel animation="slide">
+    <Carousel animation="slide" className={props.className}>
       <DestinationCard
         key="1"
         image={playaDelCarmen}
