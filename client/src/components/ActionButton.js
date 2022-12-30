@@ -1,5 +1,4 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
 import { Button } from "@mui/material";
 
 const theme = createTheme({

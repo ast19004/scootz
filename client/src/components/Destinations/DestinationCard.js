@@ -1,4 +1,4 @@
-import { Grid, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Grid, Card, CardContent, Typography } from "@mui/material";
 
 const DestinationCard = (props) => {
   return (

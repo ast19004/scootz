@@ -2,29 +2,12 @@ import playaDelCarmen from "../../assets/playa-del-carmen.png";
 import lasUvas from "../../assets/las-uvas.png";
 import castilloReal from "../../assets/castillo-real.png";
 
+import Carousel from "react-material-ui-carousel";
 import DestinationCard from "./DestinationCard";
 
-const Destinations = () => {
-  const itemData = [
-    {
-      img: { playaDelCarmen },
-      title: "Playa Del Carmen",
-      location: "Main Land",
-    },
-    {
-      img: { lasUvas },
-      title: "Las Uvas",
-      location: "West Side",
-    },
-    {
-      img: { castilloReal },
-      title: "Castillo Real",
-      location: "North-Shore",
-    },
-  ];
-
+const DestinationCarousel = () => {
   return (
-    <>
+    <Carousel animation="slide">
       <DestinationCard
         key="1"
         image={playaDelCarmen}
@@ -46,8 +29,8 @@ const Destinations = () => {
         location="Castillo Real"
         islandDirection="North-Shore"
       />
-    </>
+    </Carousel>
   );
 };
 
-export default Destinations;
+export default DestinationCarousel;

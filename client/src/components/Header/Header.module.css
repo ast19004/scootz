@@ -12,3 +12,6 @@ header {
 .header_scrolled {
   background-color: white;
 }
+.nav-main {
+  margin-left: auto;
+}

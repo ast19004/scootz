@@ -3,8 +3,7 @@ import { useContext } from "react";
 import styles from "./Header.module.css";
 
 import Logo from "./Logo";
-import Navigation from "./Navigation/MainNav";
-import ActionButton from "../ActionButton";
+import Navigation from "./Navigation/HamburgerMenu";
 
 import ScrollContext from "../../store/scroll-context";
 
@@ -16,7 +15,6 @@ const Header = (props) => {
     <header className={classes}>
       <Logo />
       <Navigation className={styles["nav-main"]} />
-      <ActionButton>Book Now</ActionButton>
     </header>
   );
 };
