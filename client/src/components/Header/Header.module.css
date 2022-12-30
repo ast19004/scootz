@@ -13,5 +13,8 @@ header {
   background-color: white;
 }
 .nav-main {
-  margin-left: auto;
+  display: grid;
+  margin-left: auto !important;
+  text-transform: uppercase;
+  padding: 5px;
 }

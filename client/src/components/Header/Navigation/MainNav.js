@@ -1,25 +1,14 @@
 import { List, ListItemButton, ListItemText } from "@mui/material";
 
 import ActionButton from "../../ActionButton";
-
+import Logo from "../Logo";
 const fontSize = "12px";
 
 const MainNav = (props) => {
   return (
     <>
-      <List
-        className={props.className}
-        sx={{
-          // display: "flex",
-          // gap: "10px",
-          display: "grid",
-          textTransform: "uppercase",
-          padding: "5px",
-          // marginLeft: "auto",
-          // marginRight: "20px",
-        }}
-        component="nav"
-      >
+      {props.mobile && <Logo mobile={true} />}
+      <List className={props.className} component="nav">
         <ListItemButton component="a" href="#">
           <ListItemText
             primary="Home"
@@ -50,8 +39,8 @@ const MainNav = (props) => {
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>
+        <ActionButton className={props.className}>Book Now</ActionButton>
       </List>
-      <ActionButton>Book Now</ActionButton>
     </>
   );
 };
