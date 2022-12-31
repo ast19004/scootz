@@ -15,15 +15,15 @@ const MainNav = (props) => {
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>
-        <ListItemButton component="a" href="#">
+        <ListItemButton component="a" href="#locations">
           <ListItemText
-            primary="Pricing"
+            primary="Locations"
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>
-        <ListItemButton component="a" href="#">
+        <ListItemButton component="a" href="#pricing">
           <ListItemText
-            primary="Tours"
+            primary="Pricing"
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>

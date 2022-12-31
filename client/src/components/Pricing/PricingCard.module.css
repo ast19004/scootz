@@ -1,6 +1,7 @@
 .priceCard {
   margin: 0 auto;
   margin-bottom: 275px;
+  margin-top: 60px;
   max-width: 400px;
 }
 .priceCard .underlayText {

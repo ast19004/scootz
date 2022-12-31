@@ -7,7 +7,7 @@ import DestinationCard from "./DestinationCard";
 
 const DestinationCarousel = (props) => {
   return (
-    <Carousel animation="slide" className={props.className}>
+    <Carousel animation="slide" duration="2000" className={props.className}>
       <DestinationCard
         key="1"
         image={playaDelCarmen}
