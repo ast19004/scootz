@@ -12,8 +12,6 @@ const PricingContainer = () => {
         className={styles.pricingContainer}
         sx={{
           backgroundColor: "darkorange",
-          position: "absolute",
-          zIndex: -500,
           width: "100%",
         }}
       >
