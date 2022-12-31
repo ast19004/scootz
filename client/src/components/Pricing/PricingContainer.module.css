@@ -1,7 +1,24 @@
+.pricingContainer {
+  position: relative;
+}
+.pricingContainer::after {
+  position: absolute;
+  z-index: -20;
+  background-color: darkorange;
+  content: "";
+  height: 1656px;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+}
+
 @media (min-width: 950px) {
   .pricingContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-evenly;
+  }
+  .pricingContainer::after {
+    height: 100%;
   }
 }

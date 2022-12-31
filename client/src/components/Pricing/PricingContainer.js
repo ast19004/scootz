@@ -8,13 +8,7 @@ const PricingContainer = () => {
   return (
     <>
       <PageBreak id="pricing" />
-      <Box
-        className={styles.pricingContainer}
-        sx={{
-          backgroundColor: "darkorange",
-          width: "100%",
-        }}
-      >
+      <Box className={styles.pricingContainer}>
         <PricingCard />
         <PricingCard />
         <PricingCard />
