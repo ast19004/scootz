@@ -1,0 +1,49 @@
+.priceCard {
+  margin: 0 auto;
+  margin-bottom: 275px;
+  max-width: 400px;
+}
+.priceCard .underlayText {
+  font-size: 115px;
+  position: absolute;
+  z-index: -1;
+  top: -5%;
+  left: 20%;
+  color: rgba(255, 255, 255, 0.5);
+}
+.priceCard .scooterImg {
+  animation-name: slideDownRight;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  max-width: 100%;
+}
+.priceCard .priceDetails {
+  color: white;
+  position: absolute;
+  top: 90%;
+  left: 20%;
+}
+.priceCard .priceDetails thead {
+  color: black;
+}
+
+@media (min-width: 950px) {
+  .priceCard .underlayText {
+    font-size: 85px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .priceCard .underlayText {
+    font-size: 115px;
+  }
+}
+
+@keyframes slideDownRight {
+  0% {
+    transform: translate(-300px, -70px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
