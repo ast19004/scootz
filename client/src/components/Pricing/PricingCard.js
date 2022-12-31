@@ -23,9 +23,11 @@ const PricingCard = (props) => {
         <hr />
         <table>
           <thead>
-            <th>2 Hours</th>
-            <th>5 Hours</th>
-            <th>ALL DAY</th>
+            <tr>
+              <th>2 Hours</th>
+              <th>5 Hours</th>
+              <th>ALL DAY</th>
+            </tr>
           </thead>
           <tbody>
             <tr>
