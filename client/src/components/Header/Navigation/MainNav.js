@@ -39,7 +39,9 @@ const MainNav = (props) => {
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>
-        <ActionButton className={props.className}>Book Now</ActionButton>
+        <ActionButton href="#booking" className={props.className}>
+          Book Now
+        </ActionButton>
       </List>
     </>
   );
