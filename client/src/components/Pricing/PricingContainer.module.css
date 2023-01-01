@@ -1,7 +1,7 @@
 .pricingContainer {
   display: grid;
   position: relative;
-  padding: 70px 2%;
+  padding: 70px 4%;
   gap: 100px;
 }
 .pricingContainer::after {
@@ -18,9 +18,7 @@
 @media (min-width: 950px) {
   .pricingContainer {
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
-    gap: 25px;
-    padding: 2%;
+    gap: 50px;
   }
   .pricingContainer::after {
     height: 100%;

@@ -1,15 +1,17 @@
 .priceCard {
   position: relative;
   margin: 0 auto;
-  padding: 5px;
   max-width: 400px;
+}
+.priceCard section {
+  justify-self: start;
 }
 .priceCard .underlayText {
   font-size: 115px;
   position: absolute;
   z-index: 1;
   top: -5%;
-  left: 4%;
+  left: 0%;
   color: rgba(255, 255, 255, 0.5);
 }
 .priceCard .scooterImg {
