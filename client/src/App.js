@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Welcome from "./components/Welcome";
 import DestinationsContainer from "./components/Destinations/DestinationsContainer";
 import PricingContainer from "./components/Pricing/PricingContainer";
-import RentalCalendar from "./components/Booking/RentalCalendar";
+import RentalCalendarContainer from "./components/Booking/RentalCalendarContainer";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Welcome />
       <DestinationsContainer />
       <PricingContainer />
-      <RentalCalendar />
+      <RentalCalendarContainer />
     </div>
   );
 }
