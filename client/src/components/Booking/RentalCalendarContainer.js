@@ -36,19 +36,21 @@ const RentalCalendarContainer = () => {
       >
         <Typography
           component="h2"
-          sx={{ textAlign: "center", padding: "50px 0" }}
+          sx={{ textAlign: "center", padding: "0 0 50px 0" }}
         >
           CHECK FOR AVAILABLE DATES
         </Typography>
         <RentalCalendar onChange={handleDateSelection} />
-        <ActionButton
-          onClick={handleDisplayBookingConfirmation}
-          className={styles["btn-calendar"]}
-          href="#booking"
-          sx={{ width: "200px" }}
-        >
-          SEND REQUEST
-        </ActionButton>
+        {!bookingConfirmationOpen && (
+          <ActionButton
+            onClick={handleDisplayBookingConfirmation}
+            className={styles["btn-calendar"]}
+            href="#booking"
+            sx={{ width: "200px" }}
+          >
+            SEND REQUEST
+          </ActionButton>
+        )}
         <BookingModal
           open={bookingConfirmationOpen}
           onClose={onCloseBookingConfirmation}
