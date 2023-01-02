@@ -1,16 +1,15 @@
 import { useState } from "react";
-import { TextField, Typography } from "@mui/material";
+import { TextField, Typography, Box } from "@mui/material";
 
-import styled from "styled-components";
-
+import styles from "./BookingForm.module.css";
 import ActionButton from "../ActionButton";
 
 const BookingForm = (props) => {
-  const dateStringOptions = {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  };
+  // const dateStringOptions = {
+  //   year: "numeric",
+  //   month: "short",
+  //   day: "numeric",
+  // };
 
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -28,58 +27,71 @@ const BookingForm = (props) => {
 
   return (
     <>
-      <Typography id="modal-modal-title" variant="h6" component="h2">
-        Request booking
-      </Typography>
-      <Typography id="modal-modal-title" variant="h6" component="span">
-        {/* {props.date.length > 0 && props.date.length < 2
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Typography id="modal-modal-title" variant="h6" component="h2">
+          <b>
+            Request
+            <br />
+            booking
+          </b>
+        </Typography>
+        <Typography
+          id="modal-modal-title"
+          variant="h6"
+          component="span"
+          sx={{
+            backgroundColor: "white",
+            color: "#A6A6A6",
+            alignSelf: "center",
+            padding: "5px",
+            borderRadius: "10px",
+          }}
+        >
+          {/* {props.date.length > 0 && props.date.length < 2
           ? props.date[0].toLocaleDateString("en-us", dateStringOptions)
           : `${props.date[0].toLocaleDateString(
               "en-us",
               dateStringOptions
             )} to ${props.date[1].toDateString("en-us", dateStringOptions)}`} */}
-        DATE
-      </Typography>
-      <CustomForm onSubmit={() => {}}>
+          <b>April 7th 2023</b>
+        </Typography>
+      </Box>
+      <form className={styles.bookingForm} onSubmit={() => {}}>
         <TextField
+          className={styles["bookingForm-input"]}
           onChange={nameChangeHandler}
           value={enteredName}
-          style={{ width: "200px", margin: "5px" }}
           type="text"
           label="Name:"
           variant="outlined"
           required
         />
         <TextField
+          className={styles["bookingForm-input"]}
           onChange={emailChangeHandler}
           value={enteredEmail}
-          style={{ width: "200px", margin: "5px" }}
           type="email"
           label="Email:"
           variant="outlined"
           required
         />
         <TextField
+          multiline
+          className={styles["bookingForm-input"]}
           onChange={noteChangeHandler}
           value={enteredNote}
-          style={{ width: "200px", margin: "5px" }}
           type="text"
           label="Note:"
           variant="outlined"
         />
 
         <br />
-        <ActionButton>Book Now</ActionButton>
-      </CustomForm>
+        <ActionButton className={styles["bookingForm-btn"]}>
+          Book Now
+        </ActionButton>
+      </form>
     </>
   );
 };
 
 export default BookingForm;
-
-const CustomForm = styled.form`
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  margin-top: 2rem;
-`;

@@ -2,20 +2,7 @@ import { Modal, Box } from "@mui/material";
 
 import BookingForm from "./BookingForm";
 
-const style = {
-  display: "grid",
-  justifyContent: "center",
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  bgcolor: "white",
-  boxShadow: 24,
-  p: 4,
-  "@media(min-width: 450px)": {
-    width: "400px",
-  },
-};
+import styles from "./BookingModal.module.css";
 
 const BookingModal = (props) => {
   return (
@@ -25,7 +12,7 @@ const BookingModal = (props) => {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <Box sx={{ style }}>
+      <Box className={styles.bookingFormContainer}>
         <BookingForm date={props.date} />
       </Box>
     </Modal>

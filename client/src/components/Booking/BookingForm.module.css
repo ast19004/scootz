@@ -1,0 +1,18 @@
+.bookingForm {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.bookingForm-input {
+  background-color: white;
+  width: 275px;
+  margin: 5px 0 !important;
+}
+.bookingForm-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  justify-self: center;
+  padding: 10px 20px;
+}

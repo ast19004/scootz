@@ -44,7 +44,7 @@ const RentalCalendarContainer = () => {
         <ActionButton
           onClick={handleDisplayBookingConfirmation}
           className={styles["btn-calendar"]}
-          href="#"
+          href="#booking"
           sx={{ width: "200px" }}
         >
           SEND REQUEST

@@ -12,9 +12,8 @@ const Welcome = (props) => {
 
   useEffect(() => {
     setWelcomeTextData(welcomeText.current.getBoundingClientRect());
-    console.log(JSON.stringify(welcomeTextData));
     // setWelcomeTextOffset(welcomeText.current.offsetTop);
-  }, [scrollCtx.offset, window.innerWidth]);
+  }, [scrollCtx.offsetY]);
 
   useEffect(() => {
     if (!welcomeTextData) {
@@ -22,7 +21,7 @@ const Welcome = (props) => {
     }
     if (Math.floor(welcomeTextData.top) === 0) {
     }
-  }, [scrollCtx.offset, welcomeTextData]);
+  }, [scrollCtx.offsetY, welcomeTextData]);
 
   return (
     <Box
