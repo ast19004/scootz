@@ -1,5 +1,7 @@
 import "./App.css";
 
+import { ToastContainer } from "react-toastify";
+
 import Header from "./components/Header/Header";
 import Welcome from "./components/Welcome";
 import DestinationsContainer from "./components/Destinations/DestinationsContainer";
@@ -14,6 +16,7 @@ function App() {
       <DestinationsContainer />
       <PricingContainer />
       <RentalCalendarContainer />
+      <ToastContainer />
     </div>
   );
 }

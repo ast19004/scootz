@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { TextField, Typography, Box } from "@mui/material";
 
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styles from "./BookingForm.module.css";
 import ActionButton from "../ActionButton";
 
@@ -10,6 +13,12 @@ const BookingForm = (props) => {
   //   month: "short",
   //   day: "numeric",
   // };
+  const notify = () => {
+    toast.success("Booking Successfull", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
+    props.onCloseModal();
+  };
 
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
@@ -86,7 +95,7 @@ const BookingForm = (props) => {
         />
 
         <br />
-        <ActionButton className={styles["bookingForm-btn"]}>
+        <ActionButton className={styles["bookingForm-btn"]} onClick={notify}>
           Book Now
         </ActionButton>
       </form>

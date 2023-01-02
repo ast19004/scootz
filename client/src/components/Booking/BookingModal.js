@@ -13,7 +13,7 @@ const BookingModal = (props) => {
       aria-describedby="modal-modal-description"
     >
       <Box className={styles.bookingFormContainer}>
-        <BookingForm date={props.date} />
+        <BookingForm date={props.date} onCloseModal={props.onClose} />
       </Box>
     </Modal>
   );
