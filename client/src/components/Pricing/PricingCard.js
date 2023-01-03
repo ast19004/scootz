@@ -1,5 +1,4 @@
 import { Box } from "@mui/system";
-import fullMotoImg from "../../assets/Scooters/fullMoto.svg";
 
 import styles from "./PricingCard.module.css";
 
@@ -14,11 +13,11 @@ const PricingCard = (props) => {
       }}
     >
       <span className={`${styles.underlayText} font-accent_secondary`}>
-        SPEED
+        {props.accentText}
       </span>
-      <img className={styles.scooterImg} src={fullMotoImg} alt="Full Moto" />
+      <img className={styles.scooterImg} src={props.src} alt={props.type} />
       <Box component="section" className={styles.priceDetails}>
-        <h2>FULL MOTO</h2>
+        <h2>{props.type}</h2>
         <p>Info about the motocycle and how fast it is.</p>
         <hr />
         <table>
@@ -31,9 +30,9 @@ const PricingCard = (props) => {
           </thead>
           <tbody>
             <tr>
-              <td>$60</td>
-              <td>$90</td>
-              <td>$120</td>
+              {props.prices.map((price) => (
+                <td>${price}</td>
+              ))}
             </tr>
           </tbody>
         </table>
