@@ -24,11 +24,22 @@
   animation: slideDownRight 3s forwards 1;
   max-width: 100%;
 }
+.priceDetails .scooterTitle {
+  font-size: 16px;
+}
 .priceCard .priceDetails {
   color: white;
 }
-.priceCard .priceDetails thead {
+.priceCard .pricingTable thead {
   color: black;
+}
+.pricingTable thead th {
+  font-weight: normal;
+  font-size: 16px;
+}
+.pricingTable th,
+.pricingTable td {
+  padding-right: 23px;
 }
 
 @media (min-width: 950px) {

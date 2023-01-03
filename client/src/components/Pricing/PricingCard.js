@@ -17,10 +17,10 @@ const PricingCard = (props) => {
       </span>
       <img className={styles.scooterImg} src={props.src} alt={props.type} />
       <Box component="section" className={styles.priceDetails}>
-        <h2>{props.type}</h2>
+        <h2 className={styles.scooterTitle}>{props.type}</h2>
         <p>Info about the motocycle and how fast it is.</p>
         <hr />
-        <table>
+        <table className={styles.pricingTable}>
           <thead>
             <tr>
               <th>2 Hours</th>
