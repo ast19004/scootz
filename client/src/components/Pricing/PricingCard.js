@@ -31,7 +31,7 @@ const PricingCard = (props) => {
           <tbody>
             <tr>
               {props.prices.map((price) => (
-                <td>${price}</td>
+                <td key={price}>${price}</td>
               ))}
             </tr>
           </tbody>

@@ -22,7 +22,12 @@ const ActionButton = (props) => {
         href={props.href}
         onClick={props.onClick}
         variant="contained"
-        sx={{ borderRadius: "25px", color: "white" }}
+        sx={{
+          borderRadius: "25px",
+          color: "white",
+          width: "fit-content",
+          height: "40px",
+        }}
       >
         {props.children}
       </Button>
