@@ -8,7 +8,7 @@ import styles from "./PricingCard.module.css";
 const PricingCard = (props) => {
   const [inViewStyle, setInViewStyle] = useState("");
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: 0,
   });
   useEffect(() => {
     if (inView) {
