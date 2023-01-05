@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 import { Box, Typography } from "@mui/material";
 import RentalCalendar from "./RentalCalendar";
@@ -14,6 +15,17 @@ const RentalCalendarContainer = () => {
   const [bookingConfirmationOpen, setBookingConfirmationOpen] = useState(false);
   const [date, setDate] = useState(new Date());
 
+  const [inViewStyle, setInViewStyle] = useState("");
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
+  useEffect(() => {
+    if (inView) {
+      setInViewStyle("slideLeft");
+    }
+    return () => setInViewStyle("");
+  }, [inView]);
+
   const handleDateSelection = (date) => {
     setDate(date);
   };
@@ -27,32 +39,35 @@ const RentalCalendarContainer = () => {
   return (
     <>
       <PageBreak id="booking" />
-      <Box className={styles.rentalContainer}>
-        <Typography className={styles["rentalContainer-title"]} component="h2">
+      <Box ref={ref} className={styles.rentalContainer}>
+        <Typography
+          className={`${styles["rentalContainer-title"]} ${inViewStyle}`}
+          component="h2"
+        >
           CHECK FOR AVAILABLE DATES
         </Typography>
 
         <RentalCalendar
-          className={styles["rentalContainer-calendar"]}
+          className={`${styles["rentalContainer-calendar"]} ${inViewStyle}`}
           onChange={handleDateSelection}
         />
         {!bookingConfirmationOpen && (
           <ActionButton
             onClick={handleDisplayBookingConfirmation}
-            className={`SM ${styles["btn-calendar"]}`}
+            className={`SM ${styles["btn-calendar"]} ${inViewStyle}`}
             href="#booking"
           >
             SEND REQUEST
           </ActionButton>
         )}
         <BookingModal
-          className={`SM ${styles["rentalContainer-modal"]}`}
+          className={`SM ${styles["rentalContainer-modal"]} ${inViewStyle}`}
           open={bookingConfirmationOpen}
           onClose={onCloseBookingConfirmation}
           date={date}
         />
         <BookingCard
-          className={`MD ${styles["rentalContainer-booking"]}`}
+          className={`MD ${styles["rentalContainer-booking"]} ${inViewStyle}`}
           date={date}
         />
       </Box>

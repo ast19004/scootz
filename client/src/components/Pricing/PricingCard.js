@@ -12,7 +12,7 @@ const PricingCard = (props) => {
   });
   useEffect(() => {
     if (inView) {
-      setInViewStyle(styles.slideDownRight);
+      setInViewStyle("slideDownRight");
     }
     return () => setInViewStyle("");
   }, [inView]);

@@ -40,11 +40,6 @@
   padding-right: 23px;
 }
 
-.slideDownRight {
-  -webkit-animation: slideDownRight 3s forwards 1;
-  animation: slideDownRight 2s forwards 1;
-}
-
 @media (min-width: 950px) {
   .priceCard .underlayText {
     font-size: 85px;
@@ -54,14 +49,5 @@
 @media (min-width: 1300px) {
   .priceCard .underlayText {
     font-size: 115px;
-  }
-}
-
-@keyframes slideDownRight {
-  0% {
-    transform: translate(-350px, -100px);
-  }
-  100% {
-    transform: translate(-40px, 0);
   }
 }
