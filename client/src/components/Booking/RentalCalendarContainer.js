@@ -40,13 +40,13 @@ const RentalCalendarContainer = () => {
         >
           CHECK FOR AVAILABLE DATES
         </Typography>
+
         <RentalCalendar onChange={handleDateSelection} />
         {!bookingConfirmationOpen && (
           <ActionButton
             onClick={handleDisplayBookingConfirmation}
             className={styles["btn-calendar"]}
             href="#booking"
-            sx={{ width: "200px" }}
           >
             SEND REQUEST
           </ActionButton>

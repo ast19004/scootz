@@ -20,3 +20,6 @@ header {
   padding: 5px;
   z-index: 100;
 }
+nav a:nth-last-child(2) {
+  margin-right: 10px;
+}

@@ -8,11 +8,10 @@ import styles from "./BookingForm.module.css";
 import ActionButton from "../ActionButton";
 
 const BookingForm = (props) => {
-  // const dateStringOptions = {
-  //   year: "numeric",
-  //   month: "short",
-  //   day: "numeric",
-  // };
+  const dateStringOptions = {
+    month: "short",
+    day: "numeric",
+  };
   const notify = () => {
     toast.success("Booking Successfull", {
       position: toast.POSITION.BOTTOM_RIGHT,
@@ -56,13 +55,21 @@ const BookingForm = (props) => {
             borderRadius: "10px",
           }}
         >
-          {/* {props.date.length > 0 && props.date.length < 2
-          ? props.date[0].toLocaleDateString("en-us", dateStringOptions)
-          : `${props.date[0].toLocaleDateString(
-              "en-us",
-              dateStringOptions
-            )} to ${props.date[1].toDateString("en-us", dateStringOptions)}`} */}
-          <b>April 7th 2023</b>
+          <b>
+            {props.date[1]
+              ? `${props.date[0].toLocaleDateString(
+                  "en-us",
+                  dateStringOptions
+                )} - ${props.date[1].toLocaleDateString(
+                  "en-us",
+                  dateStringOptions
+                )}`
+              : props.date.toLocaleDateString("en-us", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
+                })}
+          </b>
         </Typography>
       </Box>
       <form className={styles.bookingForm} onSubmit={() => {}}>

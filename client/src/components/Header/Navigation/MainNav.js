@@ -34,13 +34,13 @@ const MainNav = (props) => {
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
         </ListItemButton>
-        <ListItemButton component="a" href="#">
+        {/* <ListItemButton component="a" href="#">
           <ListItemText
             sx={mobileStyles}
             primary="Community"
             primaryTypographyProps={{ fontSize: { fontSize } }}
           />
-        </ListItemButton>
+        </ListItemButton> */}
         <ListItemButton component="a" href="#">
           <ListItemText
             sx={mobileStyles}
@@ -57,7 +57,9 @@ const MainNav = (props) => {
 export default MainNav;
 
 const CustomActionButton = styled(ActionButton)`
-  display: block !important;
-  margin: 0 auto !important;
-  margin-top: 25px !important;
+  @media (max-width: 749px) {
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 25px !important;
+  }
 `;
