@@ -42,7 +42,7 @@
 
 .slideDownRight {
   -webkit-animation: slideDownRight 3s forwards 1;
-  animation: slideDownRight 3s forwards 1;
+  animation: slideDownRight 2s forwards 1;
 }
 
 @media (min-width: 950px) {

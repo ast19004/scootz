@@ -6,12 +6,13 @@ import RentalCalendar from "./RentalCalendar";
 import PageBreak from "../PageBreak";
 import ActionButton from "../ActionButton";
 import BookingModal from "./BookingModal";
+import BookingCard from "./BookingCard";
 
 import styles from "./RentalCalendarContainer.module.css";
 
 const RentalCalendarContainer = () => {
   const [bookingConfirmationOpen, setBookingConfirmationOpen] = useState(false);
-  const [date, setDate] = useState([]);
+  const [date, setDate] = useState(new Date());
 
   const handleDateSelection = (date) => {
     setDate(date);
@@ -26,34 +27,32 @@ const RentalCalendarContainer = () => {
   return (
     <>
       <PageBreak id="booking" />
-      <Box
-        sx={{
-          position: "relative",
-          display: "grid",
-          justifyContent: "center",
-          marginBottom: "50px",
-        }}
-      >
-        <Typography
-          component="h2"
-          sx={{ textAlign: "center", padding: "0 0 50px 0" }}
-        >
+      <Box className={styles.rentalContainer}>
+        <Typography className={styles["rentalContainer-title"]} component="h2">
           CHECK FOR AVAILABLE DATES
         </Typography>
 
-        <RentalCalendar onChange={handleDateSelection} />
+        <RentalCalendar
+          className={styles["rentalContainer-calendar"]}
+          onChange={handleDateSelection}
+        />
         {!bookingConfirmationOpen && (
           <ActionButton
             onClick={handleDisplayBookingConfirmation}
-            className={styles["btn-calendar"]}
+            className={`SM ${styles["btn-calendar"]}`}
             href="#booking"
           >
             SEND REQUEST
           </ActionButton>
         )}
         <BookingModal
+          className={`SM ${styles["rentalContainer-modal"]}`}
           open={bookingConfirmationOpen}
           onClose={onCloseBookingConfirmation}
+          date={date}
+        />
+        <BookingCard
+          className={`MD ${styles["rentalContainer-booking"]}`}
           date={date}
         />
       </Box>

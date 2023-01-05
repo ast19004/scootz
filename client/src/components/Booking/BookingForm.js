@@ -16,12 +16,13 @@ const BookingForm = (props) => {
     toast.success("Booking Successfull", {
       position: toast.POSITION.BOTTOM_RIGHT,
     });
-    props.onCloseModal();
+    props.onCloseModal && props.onCloseModal();
   };
 
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredNote, setEnteredNote] = useState("");
+  const [error, setError] = useState("");
 
   const nameChangeHandler = (event) => {
     setEnteredName(event.target.value);
@@ -33,9 +34,20 @@ const BookingForm = (props) => {
     setEnteredNote(event.target.value);
   };
 
+  const handleBooking = () => {
+    if (enteredName && enteredEmail) {
+      notify();
+    } else {
+      setError("Please fill in all required* fields");
+    }
+  };
+
   return (
     <>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box
+        className={`${props.className && props.className}`}
+        sx={{ display: "flex", justifyContent: "space-between" }}
+      >
         <Typography id="modal-modal-title" variant="h6" component="h2">
           <b>
             Request
@@ -72,7 +84,7 @@ const BookingForm = (props) => {
           </b>
         </Typography>
       </Box>
-      <form className={styles.bookingForm} onSubmit={() => {}}>
+      <form className={styles.bookingForm}>
         <TextField
           className={styles["bookingForm-input"]}
           onChange={nameChangeHandler}
@@ -102,9 +114,20 @@ const BookingForm = (props) => {
         />
 
         <br />
-        <ActionButton className={styles["bookingForm-btn"]} onClick={notify}>
+        <ActionButton
+          className={styles["bookingForm-btn"]}
+          onClick={handleBooking}
+        >
           Book Now
         </ActionButton>
+        {error && (
+          <Typography
+            component="p"
+            sx={{ textAlign: "center", padding: "10px 0" }}
+          >
+            {error}
+          </Typography>
+        )}
       </form>
     </>
   );

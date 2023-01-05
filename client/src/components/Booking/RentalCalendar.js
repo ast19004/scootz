@@ -11,7 +11,7 @@ function RentalCalendar(props) {
   }, [date]);
 
   return (
-    <div className="calendar-container">
+    <div className={`calendar-container ${props.className && props.className}`}>
       <Calendar onChange={setDate} value={date} selectRange={true} />
     </div>
   );

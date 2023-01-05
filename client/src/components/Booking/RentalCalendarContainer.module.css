@@ -1,6 +1,41 @@
+.rentalContainer {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.rentalContainer-title {
+  text-align: center;
+  padding: 0 0 50px 0;
+}
+.rentalContainer-modal {
+}
+.rentalContainer-booking {
+  justify-content: space-around;
+  border: 1px solid #888;
+  padding: 15px 25px;
+}
+
 .btn-calendar {
   width: 150px;
   height: 40px;
   justify-self: center;
   margin: 25px 0 !important;
+}
+
+@media (min-width: 750px) {
+  .rentalContainer {
+    grid-template-columns: 1fr 1fr;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+  }
+  .rentalContainer-title {
+    grid-column: 1/-1;
+  }
+  .rentalContainer-calendar,
+  .rentalContainer-booking {
+    justify-self: center;
+  }
 }

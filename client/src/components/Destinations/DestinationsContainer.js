@@ -22,7 +22,7 @@ const DestinationsContainer = () => {
         </section>
         <DestinationCarousel className="SM" />
         <Grid
-          className="MD"
+          className="MD-flex"
           container
           direction="row"
           justifyContent="space-between"

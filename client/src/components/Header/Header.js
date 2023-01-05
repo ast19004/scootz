@@ -17,7 +17,7 @@ const Header = (props) => {
     <header className={headerClasses}>
       <Logo />
       <MobileNavigation className="SM" />
-      <Navigation className={`MD ${navClasses}`} />
+      <Navigation className={`MD-flex ${navClasses}`} />
     </header>
   );
 };

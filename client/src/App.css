@@ -54,9 +54,10 @@ h1 {
 
 @media (max-width: 749px) {
   .SM {
-    display: block !important;
+    display: grid !important;
   }
-  .MD {
+  .MD,
+  .MD-flex {
     display: none !important;
   }
 }
@@ -65,6 +66,9 @@ h1 {
     display: none !important;
   }
   .MD {
+    display: grid !important;
+  }
+  .MD-flex {
     display: flex !important;
   }
 }
