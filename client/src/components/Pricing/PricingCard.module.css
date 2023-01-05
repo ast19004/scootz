@@ -20,8 +20,6 @@
 .priceCard .scooterImg {
   position: relative;
   z-index: 2;
-  -webkit-animation: slideDownRight 3s forwards 1;
-  animation: slideDownRight 3s forwards 1;
   max-width: 100%;
 }
 .priceDetails .scooterTitle {
@@ -40,6 +38,11 @@
 .pricingTable th,
 .pricingTable td {
   padding-right: 23px;
+}
+
+.slideDownRight {
+  -webkit-animation: slideDownRight 3s forwards 1;
+  animation: slideDownRight 3s forwards 1;
 }
 
 @media (min-width: 950px) {
