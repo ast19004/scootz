@@ -12,7 +12,7 @@ function RentalCalendar(props) {
 
   return (
     <div className={`calendar-container ${props.className && props.className}`}>
-      <Calendar onChange={setDate} value={date} selectRange={true} />
+      <Calendar onChange={setDate} value={date} selectRange allowPartialRange />
     </div>
   );
 }

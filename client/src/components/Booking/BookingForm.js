@@ -68,19 +68,15 @@ const BookingForm = (props) => {
           }}
         >
           <b>
-            {props.date[1]
-              ? `${props.date[0].toLocaleDateString(
-                  "en-us",
-                  dateStringOptions
-                )} - ${props.date[1].toLocaleDateString(
-                  "en-us",
-                  dateStringOptions
-                )}`
-              : props.date.toLocaleDateString("en-us", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
+            {props.date.length === 1 &&
+              props.date[0].toLocaleDateString("en-us", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+              })}
+            {props.date.length > 1 &&
+              `${props.date[0].toLocaleDateString("en-us", dateStringOptions)} -
+              ${props.date[1].toLocaleDateString("en-us", dateStringOptions)}`}
           </b>
         </Typography>
       </Box>
