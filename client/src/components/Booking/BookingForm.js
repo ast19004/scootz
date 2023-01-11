@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TextField, Typography, Box } from "@mui/material";
 
 import { toast } from "react-toastify";
@@ -12,6 +12,11 @@ const BookingForm = (props) => {
     month: "short",
     day: "numeric",
   };
+  const todaysDateString = new Date().toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
   const notify = () => {
     toast.success("Booking Successfull", {
       position: toast.POSITION.BOTTOM_RIGHT,
@@ -19,6 +24,7 @@ const BookingForm = (props) => {
     props.onCloseModal && props.onCloseModal();
   };
 
+  const [dateString, setDateString] = useState(todaysDateString);
   const [enteredName, setEnteredName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredNote, setEnteredNote] = useState("");
@@ -41,6 +47,25 @@ const BookingForm = (props) => {
       setError("Please fill in all required* fields");
     }
   };
+
+  useEffect(() => {
+    let string;
+    if (props.date.length === 1) {
+      string = props.date[0].toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    }
+    if (props.date.length > 1) {
+      string = `${props.date[0].toLocaleDateString(
+        "en-us",
+        dateStringOptions
+      )} -
+              ${props.date[1].toLocaleDateString("en-us", dateStringOptions)}`;
+    }
+    setDateString(string);
+  }, [props.date]);
 
   return (
     <>
@@ -67,17 +92,7 @@ const BookingForm = (props) => {
             borderRadius: "10px",
           }}
         >
-          <b>
-            {props.date.length === 1 &&
-              props.date[0].toLocaleDateString("en-us", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-              })}
-            {props.date.length > 1 &&
-              `${props.date[0].toLocaleDateString("en-us", dateStringOptions)} -
-              ${props.date[1].toLocaleDateString("en-us", dateStringOptions)}`}
-          </b>
+          <b>{!dateString ? todaysDateString : dateString}</b>
         </Typography>
       </Box>
       <form className={styles.bookingForm}>
