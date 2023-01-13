@@ -52,6 +52,12 @@ h1 {
   text-shadow: 5px 5px rgba(0, 0, 0, 1);
 }
 
+/*   Main Page Components   */
+
+.destinationsContainer {
+  padding: 4% 15%;
+}
+
 .slideLeft {
   -webkit-animation: slideLeft 2s forwards 1;
   animation: slideLeft 2s forwards 1;
@@ -81,6 +87,9 @@ h1 {
   }
   .MD-flex {
     display: flex !important;
+  }
+  .destinationsContainer {
+    padding: 4%;
   }
 }
 

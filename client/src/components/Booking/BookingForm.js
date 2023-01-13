@@ -18,9 +18,12 @@ const BookingForm = (props) => {
     day: "numeric",
   });
   const notify = () => {
-    toast.success("Booking Successfull", {
-      position: toast.POSITION.BOTTOM_RIGHT,
-    });
+    toast.success(
+      "Request Recieved! You will hear back from us within the next business day.",
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      }
+    );
     props.onCloseModal && props.onCloseModal();
   };
 

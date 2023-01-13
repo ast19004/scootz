@@ -3,7 +3,12 @@ const Logo = (props) => {
   const propsClasses = props.className ? props.className : "";
   const classes = `App-logo ${propsClasses}`;
   return (
-    <img className={classes} src={logoImage} alt="Scootz Logo" height="40px" />
+    <img
+      className={propsClasses + classes}
+      src={logoImage}
+      alt="Scootz Logo"
+      height={props.mobile ? "34px" : "40px"}
+    />
   );
 };
 

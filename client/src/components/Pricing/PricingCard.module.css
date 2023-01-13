@@ -17,11 +17,25 @@
 .priceCard:nth-child(n + 2) .underlayText {
   letter-spacing: -6px;
 }
+
 .priceCard .scooterImg {
   position: relative;
   z-index: 2;
   max-width: 100%;
 }
+
+.priceCard:first-child .scooterImg {
+  animation-duration: 0.5s;
+  opacity: 0;
+}
+
+.priceCard:nth-child(2) .scooterImg {
+  opacity: 0;
+}
+.priceCard:nth-child(3) .scooterImg {
+  opacity: 0;
+}
+
 .priceDetails .scooterTitle {
   font-size: 16px;
 }
@@ -44,18 +58,11 @@
   .priceCard .underlayText {
     font-size: 85px;
   }
-  .priceCard:first-child .scooterImg {
-    animation-duration: 0.5s;
-    opacity: 0;
-  }
-
   .priceCard:nth-child(2) .scooterImg {
     animation-delay: 0.5s;
-    opacity: 0;
   }
   .priceCard:nth-child(3) .scooterImg {
     animation-delay: 1s;
-    opacity: 0;
   }
 }
 
