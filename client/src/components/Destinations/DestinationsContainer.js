@@ -9,11 +9,7 @@ const DestinationsContainer = () => {
   return (
     <>
       <PageBreak id="locations" />
-      <Box
-        className="destinationsContainer"
-        component="div"
-        sx={{ padding: "4%" }}
-      >
+      <Box className="destinationsContainer" component="div">
         <section>
           <SectionHeader>EXPLORE OUR DESTINATIONS</SectionHeader>
           <p className="font-accent_secondary font-small">
