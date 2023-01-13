@@ -12,9 +12,11 @@ const HamburgerMenu = (props) => {
 
   const handleMenuClick = (event) => {
     setAnchorEl(event.target);
+    props.isMenuOpen(true);
   };
   const handleMenuClose = () => {
     setAnchorEl(null);
+    props.isMenuOpen(false);
   };
 
   return (

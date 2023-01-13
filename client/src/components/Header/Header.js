@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import styles from "./Header.module.css";
 
@@ -10,13 +10,18 @@ import ScrollContext from "../../store/scroll-context";
 
 const Header = (props) => {
   const scrollCtx = useContext(ScrollContext);
+  const [isMenuOpen, setIsMenuOpen] = useState("");
+
   const headerClasses = scrollCtx.offsetY > 50 ? styles["header_scrolled"] : "";
   const navClasses = styles["nav-main"];
 
+  const handleMenuOpen = (userMenuOpen) => {
+    setIsMenuOpen(userMenuOpen);
+  };
   return (
     <header className={headerClasses}>
-      <Logo />
-      <MobileNavigation className="SM" />
+      <Logo className={isMenuOpen ? "fadeOut" : ""} />
+      <MobileNavigation className="SM" isMenuOpen={handleMenuOpen} />
       <Navigation className={`MD-flex ${navClasses}`} />
     </header>
   );
