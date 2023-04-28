@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/scootz/static/css/main.b2318f30.css",
+    "main.js": "/scootz/static/js/main.77e80037.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/scootz/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/couple-riding-on-bike.png": "/scootz/static/media/couple-riding-on-bike.9a2911f703a3d1f44309.png",
+    "static/media/cargoMoto.svg": "/scootz/static/media/cargoMoto.a64d1c8600bd8f63cd27cfc8e7a11c5f.svg",
+    "static/media/basicMoto.svg": "/scootz/static/media/basicMoto.6f3cd29d73eca6278d3d3baa19cf1ec7.svg",
+    "static/media/fullMoto.svg": "/scootz/static/media/fullMoto.77d9165c8eadee086f8870b43893ce8b.svg",
+    "static/media/las-uvas.png": "/scootz/static/media/las-uvas.8c9f98c729960460fd00.png",
+    "static/media/playa-del-carmen.png": "/scootz/static/media/playa-del-carmen.63ac37e1d380edf0ba3a.png",
+    "static/media/castillo-real.png": "/scootz/static/media/castillo-real.b0b533196f7dab89032d.png",
+    "static/media/scootzLogo.svg": "/scootz/static/media/scootzLogo.5ae80089b2e245c9616e765104a36dfb.svg",
+    "index.html": "/scootz/index.html",
+    "main.b2318f30.css.map": "/scootz/static/css/main.b2318f30.css.map",
+    "main.77e80037.js.map": "/scootz/static/js/main.77e80037.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/scootz/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2318f30.css",
+    "static/js/main.77e80037.js"
+  ]
+}
