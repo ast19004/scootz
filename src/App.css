@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@600&family=Pacifico&family=Poppins:wght@400;800&display=swap");
 
+.app-opening {
+  animation: 4s fadeAway forwards;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -110,5 +114,15 @@ h1 {
   }
   100% {
     transform: translate(0px, 0);
+  }
+}
+
+@keyframes fadeAway {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+    z-index: -2147483647;
   }
 }
