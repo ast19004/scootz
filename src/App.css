@@ -43,16 +43,16 @@ h1 {
 .overlay-text {
   color: white;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 4%;
   z-index: 1;
 }
 .midlay-text {
   position: absolute;
-  top: 25%;
-  left: 4%;
-  opacity: 10%;
-  font-size: 90px;
+  top: 30%;
+  left: 10%;
+  opacity: 17%;
+  font-size: 70px;
   text-shadow: 5px 5px rgba(0, 0, 0, 1);
 }
 
@@ -73,6 +73,19 @@ h1 {
 }
 
 /***    Media Queries    ***/
+@media (min-width: 500px) {
+  .overlay-text {
+    top: 25%;
+    left: 4%;
+  }
+  .midlay-text {
+    top: 25%;
+    left: 4%;
+    opacity: 10%;
+    font-size: 90px;
+    text-shadow: 5px 5px rgba(0, 0, 0, 1);
+  }
+}
 @media (max-width: 749px) {
   .SM {
     display: grid !important;

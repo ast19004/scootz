@@ -7,7 +7,7 @@
   justify-self: start;
 }
 .priceCard .underlayText {
-  font-size: 115px;
+  font-size: 109px;
   position: absolute;
   z-index: 1;
   top: -5%;
@@ -54,6 +54,11 @@
   padding-right: 23px;
 }
 
+@media (min-width: 500px) {
+  .priceCard .underlayText {
+    font-size: 115px;
+  }
+}
 @media (min-width: 950px) {
   .priceCard .underlayText {
     font-size: 85px;
