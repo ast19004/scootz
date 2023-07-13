@@ -41,20 +41,20 @@ const RentalCalendarContainer = () => {
       <PageBreak id="booking" />
       <Box ref={ref} className={styles.rentalContainer}>
         <Typography
-          className={`${styles["rentalContainer-title"]} ${inViewStyle}`}
+          className={`${styles["rentalContainer-title"]}`}
           component="h2"
         >
           CHECK FOR AVAILABLE DATES
         </Typography>
 
         <RentalCalendar
-          className={`${styles["rentalContainer-calendar"]} ${inViewStyle}`}
+          className={`${styles["rentalContainer-calendar"]}`}
           onChange={handleDateSelection}
         />
         {!bookingConfirmationOpen && (
           <ActionButton
             onClick={handleDisplayBookingConfirmation}
-            className={`SM ${styles["btn-calendar"]} ${inViewStyle}`}
+            className={`SM ${styles["btn-calendar"]}`}
             href="#booking"
           >
             SEND REQUEST

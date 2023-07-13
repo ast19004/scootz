@@ -59,12 +59,12 @@ h1 {
 /*   Main Page Components   */
 
 .destinationsContainer {
-  padding: 4% 15%;
+  padding: 2%;
 }
 
 .slideLeft {
-  -webkit-animation: slideLeft 2s forwards 1;
-  animation: slideLeft 2s forwards 1;
+  -webkit-animation: slideLeft 2s 1;
+  animation: slideLeft 2s 1;
 }
 
 .slideDownRight {
@@ -104,9 +104,6 @@ h1 {
   }
   .MD-flex {
     display: flex !important;
-  }
-  .destinationsContainer {
-    padding: 4%;
   }
 }
 
