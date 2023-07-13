@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scootz/static/css/main.ed7dca96.css",
-    "main.js": "/scootz/static/js/main.841f0e73.js",
+    "main.css": "/scootz/static/css/main.a2ebcb22.css",
+    "main.js": "/scootz/static/js/main.13b937a7.js",
     "static/js/787.c4e7f8f9.chunk.js": "/scootz/static/js/787.c4e7f8f9.chunk.js",
     "static/media/couple-riding-on-bike.png": "/scootz/static/media/couple-riding-on-bike.9a2911f703a3d1f44309.png",
     "static/media/cargoMoto.svg": "/scootz/static/media/cargoMoto.a64d1c8600bd8f63cd27cfc8e7a11c5f.svg",
@@ -12,12 +12,12 @@
     "static/media/castillo-real.png": "/scootz/static/media/castillo-real.b0b533196f7dab89032d.png",
     "static/media/scootzLogo.svg": "/scootz/static/media/scootzLogo.5ae80089b2e245c9616e765104a36dfb.svg",
     "index.html": "/scootz/index.html",
-    "main.ed7dca96.css.map": "/scootz/static/css/main.ed7dca96.css.map",
-    "main.841f0e73.js.map": "/scootz/static/js/main.841f0e73.js.map",
+    "main.a2ebcb22.css.map": "/scootz/static/css/main.a2ebcb22.css.map",
+    "main.13b937a7.js.map": "/scootz/static/js/main.13b937a7.js.map",
     "787.c4e7f8f9.chunk.js.map": "/scootz/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed7dca96.css",
-    "static/js/main.841f0e73.js"
+    "static/css/main.a2ebcb22.css",
+    "static/js/main.13b937a7.js"
   ]
 }
